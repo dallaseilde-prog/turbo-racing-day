@@ -896,7 +896,7 @@
             if (inputs.left) turn -= 1;
             if (inputs.right) turn += 1;
 
-            player.offset -= turn * player.turnSpeed * dt;
+            player.offset += turn * player.turnSpeed * dt;
             const limit = CONFIG.trackWidth - 3;
             if (player.offset > limit) player.offset = limit;
             if (player.offset < -limit) player.offset = -limit;
